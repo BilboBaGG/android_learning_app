@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.label import Label
-from random import randints
+from random import randint
 import codecs
 
 # The base window
