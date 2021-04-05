@@ -32,12 +32,12 @@ class WindowApp(App):
 		self.making_label_text()
 
 		# Making button 
-		but = Button(size_hint = [.1,.1], on_release = self.end_callback)		
+		but = Button(size_hint = [1,.2], on_release = self.end_callback, text="Выучил!")		
 		end_button = AnchorLayout(anchor_x = "right", anchor_y = "bottom")
 		end_button.add_widget(but)
 
 		# Making text 
-		text = Label(text = self.label, font_size = 10)
+		text = Label(text = self.label, font_size = 50)
 		text_layout = AnchorLayout()
 		text_layout.add_widget(text)
 
