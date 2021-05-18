@@ -15,33 +15,26 @@ class MainApp(App):
 		a = str(instance.text)
 		
 		for i in range(8):
-			self.massiv[i].text = "0"
+			self.massiv2[i].text = "0"
 			if a == self.arr[i]:
-				self.massiv[i].text = "1"
+				self.massiv2[i].text = "1"
 
 	def build(self):
 
 		self.arr = ["География","Английский язык","Математика","Информатика","Русский язык","Физика","*","№","Главный экран"]
 		self.i = 0
-			
 		self.gl_layout = GridLayout (cols = 2,spacing = 5, size_hint = (1, .75))
 
 		self.gl_layout1 = GridLayout(cols = 1, spacing = 16, size_hint = (.82, 1))
-		
-		self.gl_layout1.add_widget (Button (text = "География", background_color = (.91, .77, .5, 1), background_normal = '' , color = (.13, .07, .01, 1), on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "Английский язык", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "Математика", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "Информатика", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "Русский язык", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "Физика", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "*", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-		self.gl_layout1.add_widget (Button (text = "№", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
-
-		self.gl_layout2 = GridLayout (cols = 1, spacing = 16, size_hint = (.15, 1))
-			
-		self.massiv = [Label(text = "0", font_size = 40, color = (.13, .07, .01, 1)) for _ in range(8)]
+		self.massiv = [Button(text = self.arr[i], background_color = (.91, .77, .5, 1), background_normal = '' , color = (.13, .07, .01, 1), on_release = self.vibor) for i in range(8)]
 		for i in range(8):
-			self.gl_layout2.add_widget(self.massiv[i])
+			self.gl_layout1.add_widget(self.massiv[i])
+
+
+		self.gl_layout2 = GridLayout (cols = 1, spacing = 16, size_hint = (.15, 1))	
+		self.massiv2 = [Label(text = "0", font_size = 40, color = (.13, .07, .01, 1)) for _ in range(8)]
+		for i in range(8):
+			self.gl_layout2.add_widget(self.massiv2[i])
 
 		self.gl_layout.add_widget(self.gl_layout1)
 		self.gl_layout.add_widget(self.gl_layout2)
