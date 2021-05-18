@@ -18,6 +18,8 @@ class MainApp(App):
 			self.massiv2[i].text = "0"
 			if a == self.arr[i]:
 				self.massiv2[i].text = "1"
+				file = open('info.txt', 'w')
+				file.write(self.arr[i]) 
 
 	def build(self):
 
