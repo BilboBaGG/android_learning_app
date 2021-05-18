@@ -51,13 +51,22 @@ class MainApp(App):
 	def vibor(self, instance):
 		
 		a = str(instance.text)
-		for self.i in range(len(self.arr)): 
-			if a == self.arr[self.i]:
-				self.stranica = self.i
+		#for self.i in range(len(self.arr)): 
+		#	if a == self.arr[self.i]:
+		#		self.stranica = self.i
 		
+		for i in range(8):
+			self.massiv[i].text = "0"
+			if a == self.arr[i]:
+				self.massiv[i].text = "1"
+
+
+
+
+
 	def build(self):
 
-		self.arr = ["Главный экран","География","Английский язык","Математика","Информатика","Русский язык","Физика","*","№"]
+		self.arr = ["География","Английский язык","Математика","Информатика","Русский язык","Физика","*","№","Главный экран"]
 		self.i = 0
 			
 		self.gl_layout = GridLayout (cols = 2,spacing = 5, size_hint = (1, .75))
