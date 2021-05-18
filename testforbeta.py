@@ -60,10 +60,6 @@ class MainApp(App):
 			if a == self.arr[i]:
 				self.massiv[i].text = "1"
 
-
-
-
-
 	def build(self):
 
 		self.arr = ["География","Английский язык","Математика","Информатика","Русский язык","Физика","*","№","Главный экран"]
@@ -84,7 +80,7 @@ class MainApp(App):
 
 		self.gl_layout2 = GridLayout (cols = 1, spacing = 16, size_hint = (.12, 1))
 			
-		self.massiv = [Label(text = "0", font_size = 20, color = (.13, .07, .01, 1)) for _ in range(8)]
+		self.massiv = [Label(text = "0", font_size = 40, color = (.13, .07, .01, 1)) for _ in range(8)]
 		for i in range(8):
 			self.gl_layout2.add_widget(self.massiv[i])
 
