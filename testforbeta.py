@@ -51,9 +51,6 @@ class MainApp(App):
 	def vibor(self, instance):
 		
 		a = str(instance.text)
-		#for self.i in range(len(self.arr)): 
-		#	if a == self.arr[self.i]:
-		#		self.stranica = self.i
 		
 		for i in range(8):
 			self.massiv[i].text = "0"
