@@ -1,0 +1,3 @@
+﻿a^b = c => b = log a(b)
+cos(-x) = cos(x)
+sin(-x) = - sin(x)

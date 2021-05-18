@@ -6,6 +6,9 @@ from random import randint
 import codecs
 
 from kivy.core.window import Window
+
+COST_LEARNING = ["Geography","English","Math","IT","Russian","Phisics","History","Music"]
+
 Window.clearcolor = (1, .97 , .86 , 1)
 
 # The base window
@@ -15,13 +18,13 @@ class WindowApp(App):
 	# Lable Text
 	def making_label_text(self):
 		file = open("var.txt", "r")
-		file_to_open = file.read()
+		index_file_to_open = file.read()
 		file.close()
 
-		# Countries and capitals
-		if file_to_open == "country_city":
-			file = codecs.open( "country-sity.txt", "r", "utf_8_sig")
+		file_to_open = COST_LEARNING[int(index_file_to_open)]
 
+		# Countries and 
+		file = codecs.open( f"learning/"+file_to_open+".txt", "r", "utf_8_sig")
 		labeles = file.read().split("\n")
 		self.label = labeles[randint(0, len(labeles)-1)]
 
