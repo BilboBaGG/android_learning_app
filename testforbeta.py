@@ -10,44 +10,6 @@ Window.clearcolor = (1, .97 , .86 , 1)
 
 class MainApp(App):
 
-	def making_mainscreen(self,instance):
-
-		self.vse.clear_widgets()
-		self.gl_layout.clear_widgets()
-		self.gl_layout1.clear_widgets()
-		self.gl_layout2.clear_widgets()
-		self.bl_layout.clear_widgets()
-	
-		self.gl_layout1.add_widget (Button (text = "География", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "Английский язык", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "Математика", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "Информатика", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "Русский язык", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "Физика", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "*", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		self.gl_layout1.add_widget (Button (text = "№", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1), on_release = self.making_stranica))
-		
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-		self.gl_layout2.add_widget(Label(text = "0", color = (.13, .07, .01, 1)))
-
-		self.gl_layout.add_widget(self.gl_layout1)
-		self.gl_layout.add_widget(self.gl_layout2)
-		
-		self.lb = Label (text = "ADRON", color = (.13, .07, .01, 1), font_size = 30, size_hint = (1, .1))
-
-		self.bl_layout.add_widget (Button (text = "назад", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1)))
-		self.bl_layout.add_widget (Button (text= "вперёд", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1)))
-
-		self.vse.add_widget(self.lb)
-		self.vse.add_widget(self.gl_layout)
-		self.vse.add_widget(self.bl_layout)
-
 	def vibor(self, instance):
 		
 		a = str(instance.text)
