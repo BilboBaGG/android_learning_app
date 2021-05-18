@@ -25,12 +25,13 @@ class MainApp(App):
 		self.i = 0
 		self.gl_layout = GridLayout (cols = 2,spacing = 5, size_hint = (1, .75))
 
+		#grid with theme buttons
 		self.gl_layout1 = GridLayout(cols = 1, spacing = 16, size_hint = (.82, 1))
 		self.massiv = [Button(text = self.arr[i], background_color = (.91, .77, .5, 1), background_normal = '' , color = (.13, .07, .01, 1), on_release = self.vibor) for i in range(8)]
 		for i in range(8):
 			self.gl_layout1.add_widget(self.massiv[i])
 
-
+		#grid with 0 1
 		self.gl_layout2 = GridLayout (cols = 1, spacing = 16, size_hint = (.15, 1))	
 		self.massiv2 = [Label(text = "0", font_size = 40, color = (.13, .07, .01, 1)) for _ in range(8)]
 		for i in range(8):
@@ -41,10 +42,12 @@ class MainApp(App):
 		
 		self.lb = Label (text = "ADRON", color = (.13, .07, .01, 1), font_size = 50, size_hint = (1, .1))
 
+		#boxlayout for 2 buttons
 		self.bl_layout = BoxLayout (size_hint = (1, .07), spacing = 16)
 		self.bl_layout.add_widget (Button (text = "назад", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1)))
 		self.bl_layout.add_widget (Button (text= "вперёд", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1)))
 
+		#all in one window
 		self.vse = BoxLayout(orientation = "vertical", padding = 20,spacing = 10)
 		self.vse.add_widget(self.lb)
 		self.vse.add_widget(self.gl_layout)
