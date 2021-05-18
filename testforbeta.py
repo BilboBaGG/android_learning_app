@@ -67,7 +67,7 @@ class MainApp(App):
 			
 		self.gl_layout = GridLayout (cols = 2,spacing = 5, size_hint = (1, .75))
 
-		self.gl_layout1 = GridLayout(cols = 1, spacing = 16, size_hint = (.85, 1))
+		self.gl_layout1 = GridLayout(cols = 1, spacing = 16, size_hint = (.82, 1))
 		
 		self.gl_layout1.add_widget (Button (text = "География", background_color = (.91, .77, .5, 1), background_normal = '' , color = (.13, .07, .01, 1), on_release = self.vibor))
 		self.gl_layout1.add_widget (Button (text = "Английский язык", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
@@ -78,7 +78,7 @@ class MainApp(App):
 		self.gl_layout1.add_widget (Button (text = "*", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
 		self.gl_layout1.add_widget (Button (text = "№", background_color = (.91, .77, .5, 1), background_normal = '', color = (.13, .07, .01, 1),on_release = self.vibor))
 
-		self.gl_layout2 = GridLayout (cols = 1, spacing = 16, size_hint = (.12, 1))
+		self.gl_layout2 = GridLayout (cols = 1, spacing = 16, size_hint = (.15, 1))
 			
 		self.massiv = [Label(text = "0", font_size = 40, color = (.13, .07, .01, 1)) for _ in range(8)]
 		for i in range(8):
