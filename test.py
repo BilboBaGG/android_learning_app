@@ -10,6 +10,7 @@ CONST = ["География","Английский язык","Математи�
 
 Window.clearcolor = (1, .97 , .86 , 1)
 
+
 class MainApp(App):
 
 	def vibor(self, instance):
